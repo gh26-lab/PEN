@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Suggestions
+{% endblock %}
+
+{% block main %}
+    <h4>Suggestions</h4>
+    <p>
+        Nous n'avons pas trouvé de résultat qui corresponde exactement à vore requête.
+        Peut-être êtes-vous intéressés par les suggestions suivantes:
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Nom</th>
+                <th class="text-start">Couleur</th>
+                <th class="text-end">Maille</th>
+                <th class="text-end">Densité</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in poss%}
+                <tr>
+                    <td>{{i.nom}}</td>
+                    <td>{{i.couleur}}</td>
+                    <td>{{i.maille}}</td>
+                    <td>{{i.densité}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        
+{% endblock %}

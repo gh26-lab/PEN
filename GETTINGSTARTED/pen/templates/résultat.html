@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Résultat
+{% endblock %}
+
+{% block main %}
+    <p>Voici ce que nous avons trouvé:</p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Nom</th>
+                <th class="text-start">Couleur</th>
+                <th class="text-end">Maille</th>
+                <th class="text-end">Densité</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in crist%}
+                <tr>
+                    <td>{{i.nom}}</td>
+                    <td>{{i.couleur}}</td>
+                    <td>{{i.maille}}</td>
+                    <td>{{i.densité}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chercher propriétés
+{% endblock %}
+
+{% block main %}
+    <form action="/propriétés" method="post">
+        <label for="nom">Nom du cristal:</label>
+        <input type="text" id="nom" name="nom" required>
+        <br><br>
+        <input type="submit" value="Entrer">
+    </form>
+{% endblock %}

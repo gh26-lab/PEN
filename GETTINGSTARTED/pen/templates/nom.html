@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chercher nom
+{% endblock %}
+
+{% block main %}
+    <form action="/nom" method="post">
+        <div class="mb-3">
+            <label for="couleur">Couleur du cristal (sélection multiple possible):</label><br>
+            <select name="couleur" id="couleur" multiple required>
+                <option value="blanc ou transparent">Blanc/transparent</option>
+                <option value="rose">Rose</option>
+                <option value="violet">Violet</option>
+                <option value="bleu">Bleu</option>
+                <option value="autre">Autre</option>
+            </select><br><br>
+        </div>
+        <div class="mb-3">
+            <label for="maille">Forme de la maille:</label><br>
+            <select name="maille" id="maille" required>
+                <option value="cubique">cubique</option>
+                <option value="quadratique">quadratique</option>
+                <option value="orthorhombique">orthorhombique</option>
+                <option value="hexagonal">hexagonal</option>
+                <option value="monoclinique">monoclinique</option>
+                <option value="triclinique">triclinique</option>
+            </select><br><br>
+        </div>
+        <div class="mb-3">
+            <label for="nom">Densité du cristal:</label><br>
+            <select name="densité" id="densité" required>
+                <option value="- que 1">- que 1</option>
+                <option value="1 - 1,5">1 - 1,5</option>
+                <option value="1,5 - 2">1,5 - 2</option>
+                <option value="2 - 2,5">2 - 2,5</option>
+                <option value="2,5 - 3">2,5 - 3</option>
+                <option value="+ que 3">+ que 3</option>
+            </select><br><br>
+        </div>
+        <input type="submit" value="Entrer">
+    </form>
+{% endblock %}
